@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('demande', function (Blueprint $table) {
             $table->id();
+            $table->integer("client_id");
+            $table->string("name");
+            $table->string("year");
+            $table->string("nature_de_element");
+            $table->json("config");
+            $table->json("data");
             $table->timestamps();
         });
     }

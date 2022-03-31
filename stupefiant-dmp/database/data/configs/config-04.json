@@ -1,0 +1,150 @@
+{
+  
+ "config" : {
+  "origin": "DCI",
+  "x_axis": [
+    [
+      {
+        "label": "Nom de la specialité presentation et dosage",
+        "rowSpan": 3,
+        "isXAxis": {
+          "position": 1,
+          "validator": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "label": "Quantité livrée (nombre de boite)",
+        "rowSpan": 3,
+        "isXAxis": {
+          "position": 2,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "Quantité livrée (Sel)",
+        "rowSpan": 3,
+        "isXAxis": {
+          "position": 3,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "Quantité livrée (BA)",
+        "rowSpan": 3,
+        "isXAxis": {
+          "position": 4,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "Destinataire",
+        "colSpan": 6
+      },
+      {
+        "label": "Total substance livrée, tous destinataires confondus",
+        "rowSpan": 3,
+        "isXAxis": {
+          "position": 11,
+          "validator": {
+            "type": "callback",
+            "formula": "sum",
+            "entries": [5, 6, 7, 8, 9, 10]
+          }
+        }
+      }
+    ],
+    [
+      {
+        "label": "Public",
+        "colSpan": 3
+      },
+      {
+        "label": "Privée",
+        "colSpan": 3
+      }
+    ],
+    [
+      {
+        "isXAxis": {
+          "position": 5,
+          "ancestor_position": [5, 1],
+          "validator": {
+            "type": "number"
+          }
+        },
+        "label": "CHU"
+      },
+      {
+        "isXAxis": {
+          "position": 6,
+          "ancestor_position": [5, 1],
+          "validator": {
+            "type": "number"
+          }
+        },
+        "label": "HMI"
+      },
+      {
+        "isXAxis": {
+          "position": 7,
+          "ancestor_position": [5, 1],
+          "validator": {
+            "type": "number"
+          }
+        },
+        "label": "M.S"
+      },
+
+      {
+        "isXAxis": {
+          "position": 8,
+          "ancestor_position": [5, 2],
+          "validator": {
+            "type": "number"
+          }
+        },
+        "label": "Grossite"
+      },
+      {
+        "isXAxis": {
+          "position": 9,
+          "ancestor_position": [5, 2],
+          "validator": {
+            "type": "number"
+          }
+        },
+        "label": "Officines"
+      },
+      {
+        "isXAxis": {
+          "position": 10,
+          "ancestor_position": [5, 2],
+          "validator": {
+            "type": "number"
+          }
+        },
+        "label": "Cliniques"
+      }
+    ]
+  ],
+  "y_axis": [
+    {
+      "label": ""
+    },
+    {
+      "label": ""
+    },
+    {
+      "label": ""
+    }
+  ]
+}
+}

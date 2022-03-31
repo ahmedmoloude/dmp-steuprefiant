@@ -1,0 +1,86 @@
+{
+    
+  "config" :   {
+    "origin": "DCI",
+    "x_axis": [
+      [
+        {
+          "label": "Numéro et Date de l'Autorisation exportation",
+          "isXAxis": {
+            "position": 1,
+            "validator": {
+              "type": "text"
+            }
+          }
+        },
+        {
+          "label": "Nom de la spécialité Présentation et dosage",
+          "isXAxis": {
+            "position": 2,
+            "validator": {
+              "type": "text"
+            }
+          }
+        },
+        {
+          "label": "Quantité exportée (nombre de boites)",
+          "isXAxis": {
+            "position": 3,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Quantité exportée (Sel)",
+          "isXAxis": {
+            "position": 4,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Quantité exportée (Base Anhydre)",
+          "isXAxis": {
+            "position": 5,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Pays de destination",
+          "isXAxis": {
+            "position": 6,
+            "validator": {
+              "type": "text"
+            }
+          }
+        },
+        {
+          "label": "Total de substance exportée par le pays (Base Anhydre)",
+          "isXAxis": {
+            "position": 7,
+            "validator": {
+              "type": "callback",
+              "formula": "sum",
+              "entries": [5]
+            }
+          }
+        }
+      ]
+    ],
+    "y_axis": [
+      {
+        "label": "DCI 1",
+        "subRow": 2
+      },
+      {
+        "label": "DCI 2",
+        "subRow": 2
+      }
+    ],
+    "y_axis_rowSpan": [7]
+  }
+}

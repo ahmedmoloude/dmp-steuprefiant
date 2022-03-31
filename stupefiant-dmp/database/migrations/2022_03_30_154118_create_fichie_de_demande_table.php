@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fichie_de_demande', function (Blueprint $table) {
+        Schema::create('fichie_de_demandes', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->json("nature_de_element");
+            $table->enum('year', ["increment" , "decrement"]);
             $table->timestamps();
         });
     }

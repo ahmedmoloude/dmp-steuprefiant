@@ -1,0 +1,126 @@
+{
+    "origin": "",
+    "x_axis": [
+      [
+        {
+          "label": "Dénominations",
+          "colSpan": 2
+        },
+        {
+          "label": "Avant fabrication",
+          "colSpan": 2
+        },
+        {
+          "label": "En cours de fabrication",
+          "colSpan": 3
+        },
+        {
+          "label": "Autre (si applicable)"
+        },
+        {
+          "label": "Total"
+        }
+      ],
+      [
+        {
+          "label": "DCI",
+          "isXAxis": {
+            "ancestor_position": [1],
+            "position": 1,
+            "validator": {
+              "type": "text"
+            }
+          }
+        },
+        {
+          "label": "Nom de ou des spécialités à fabriquer Présentation et dosage",
+          "isXAxis": {
+            "ancestor_position": [1],
+            "position": 2,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Prélèvements contrôle MP à la réception, développement, (BA)",
+          "isXAxis": {
+            "ancestor_position": [2],
+            "position": 3,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Prélèvements échantillon pour LNCM (BA)",
+          "isXAxis": {
+            "ancestor_position": [2],
+            "position": 4,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Quantité de substance engagée pour la fabrication (BA)",
+          "isXAxis": {
+            "ancestor_position": [3],
+            "position": 5,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Quantité de substance prélevée en cours de fabrication (BA)",
+          "isXAxis": {
+            "ancestor_position": [3],
+            "position": 6,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Pertes de substances au cours de la fabrication (BA)",
+          "isXAxis": {
+            "ancestor_position": [3],
+            "position": 7,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Déclarer toute autre utilisation non mentionnée (BA)",
+          "isXAxis": {
+            "ancestor_position": [4],
+            "position": 8,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Quantités prélevées avant fabrication (colonnes 3 et 4) additionnées aux quantités engagées dans la fabrication (colonne 5) BA) Si \"Autre\" : ajouter au total",
+          "isXAxis": {
+            "ancestor_position": [5],
+            "position": 9,
+            "validator": {
+              "type": "callback",
+              "formula": "sum",
+              "entries": [3, 4 , 5, 6, 7, 8]
+            }
+          }
+        }
+      ]
+    ],
+    "y_axis": [
+      {
+        "label": ""
+      }
+    ]
+    
+  }
+  

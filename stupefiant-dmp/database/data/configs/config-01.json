@@ -1,0 +1,109 @@
+
+{
+"config" : {
+    "origin": "Substance",
+    "x_axis": [
+      [
+        {
+          "label": "1"
+        },
+        {
+          "label": "2",
+          "colSpan": 2
+        },
+        {
+          "label": "3",
+          "colSpan": 2
+        },
+        {
+          "label": "4"
+        }
+      ],
+      [
+        {
+          "label": "Quantité qui sera consommée pour les besoins médicaux scientifiques",
+          "rowSpan": 2,
+          "isXAxis": {
+            "position": 1,
+            "ancestor_position": [1],
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "Quantité (Base Anhydre) qui sera utilsée pour la fabrication de :",
+          "colSpan": 2
+        },
+        {
+          "label": "Quantité (Base Anhydre) qui sera importée sous forme de :",
+          "colSpan": 2
+        },
+        {
+          "label": "Quantité (Base Anhydre) qui sera détenu en stock le 31/12/AA :",
+          "rowSpan": 2,
+          "isXAxis": {
+            "position": 6,
+            "ancestor_position": [4],
+            "validator": {
+              "type": "number"
+            }
+          }
+        }
+      ],
+      [
+        {
+          "isXAxis": {
+            "position": 2,
+            "ancestor_position": [2, 2],
+            "validator": {
+              "type": "number"
+            }
+          },
+          "label": "Stupéfiants"
+        },
+        {
+          "isXAxis": {
+            "position": 3,
+            "ancestor_position": [2, 2],
+            "validator": {
+              "type": "number"
+            }
+          },
+          "label": "Produits exonérés"
+        },
+        {
+          "isXAxis": {
+            "position": 4,
+            "ancestor_position": [3, 3],
+            "validator": {
+              "type": "number"
+            }
+          },
+          "label": "PF"
+        },
+        {
+          "isXAxis": {
+            "position": 5,
+            "ancestor_position": [3, 3],
+            "validator": {
+              "type": "number"
+            }
+          },
+          "label": "MP"
+        }
+      ]
+    ],
+    "y_axis": [
+      {
+        "label": "Alphaprodine"
+      },
+      {
+        "label": "Anilédrine"
+      },
+      {
+        "label": "Bézitramide"
+      }
+    ]
+  }
+}
