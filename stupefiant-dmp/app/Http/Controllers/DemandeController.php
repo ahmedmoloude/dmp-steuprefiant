@@ -119,4 +119,28 @@ class DemandeController extends Controller
     {
         //
     }
+
+
+    
+    public function getByClinetID(Request $request)
+    {
+        $client_id = $request->query('id');
+        $demande = Demande::where("client_id" , $client_id)->get();
+        return response($demande);
+    }
+
+
+    public function uploadImage(Request $request)
+    {
+        $image = $request->file('file');
+        try {
+                $fname = $image->getClientOriginalName();
+                $image->move(storage_path("/app/public/cdn/images"), $fname);
+                return response(['file_name' => "storage/cdn/images/".$fname], 201);
+        
+        } catch (Exception $ex) {
+
+            return response(['message' => "Images::noUpploaded " . $ex->getMessage()], 500);
+        }
+    }
 }

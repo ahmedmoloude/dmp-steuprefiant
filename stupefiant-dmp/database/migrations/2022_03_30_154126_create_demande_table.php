@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string("nature_de_element");
             $table->json("config");
             $table->json("data");
+            $table->enum('status', ['Pending',"Accepted","rejected"])->default('Pending');
             $table->timestamps();
         });
     }

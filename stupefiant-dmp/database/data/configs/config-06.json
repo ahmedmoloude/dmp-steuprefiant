@@ -1,0 +1,66 @@
+{
+  "config" : {
+
+  "origin": "DCI",
+  "x_axis": [
+    [
+      {
+        "label": "Quantité achetée (Sel)",
+        "isXAxis": {
+          "position": 1,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "Quantité achetée (Base anhydre)",
+        "isXAxis": {
+          "position": 2,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "Nom et adresse du fournisseur local",
+        "isXAxis": {
+          "position": 3,
+          "validator": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "label": "Utilisation finale",
+        "isXAxis": {
+          "position": 4,
+          "validator": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "label": "Stock restant au 3 Décembre AAAA",
+        "isXAxis": {
+          "position": 5,
+          "validator": {
+            "type": "number"
+          }
+        }
+      }
+    ]
+  ],
+  "y_axis": [
+    {
+      "label": ""
+    },
+    {
+      "label": ""
+    },
+    {
+      "label": ""
+    }
+  ]
+}
+}

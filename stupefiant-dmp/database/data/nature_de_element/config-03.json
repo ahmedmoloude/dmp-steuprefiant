@@ -1,0 +1,22 @@
+{ 
+    "elements" :  [
+         {
+             "label" : "stupefiant",
+             "tables" :[
+                 3
+             ]
+         },
+         {
+             "label" : "Psychotropes",
+             "tables" :[
+                 3
+             ]
+         },
+         {
+             "label" : "Précurseurs Chimiques",
+             "tables" :[
+                 3
+             ]
+         }
+    ]
+ }

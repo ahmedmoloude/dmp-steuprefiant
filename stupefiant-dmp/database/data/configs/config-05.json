@@ -1,0 +1,57 @@
+{
+  "config" : {
+
+  "origin": "DCI",
+  "x_axis": [
+    [
+      {
+        "label": "Numéro et Date de l'Autorisation",
+        "isXAxis": {
+          "position": 1,
+          "validator": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "label": "Quantité autorisée",
+        "isXAxis": {
+          "position": 2,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "Provenance",
+        "isXAxis": {
+          "position": 3,
+          "validator": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "label": "Destination",
+        "isXAxis": {
+          "position": 4,
+          "validator": {
+            "type": "text"
+          }
+        }
+      }
+    ]
+  ],
+  "y_axis": [
+    {
+      "label": ""
+    },
+    {
+      "label": ""
+    },
+    {
+      "label": ""
+    }
+  ]
+}
+}

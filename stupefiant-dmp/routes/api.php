@@ -28,5 +28,12 @@ Route::resource('/fichie_demande', fichieDedemandeController::class);
 Route::resource('/demande', DemandeController::class);
 
 Route::post('/configs', [ConfigController::class , 'getConfigs']);
+Route::get('/client_demande', [DemandeController::class , 'getByClinetID']);
 
+Route::post('/upload', [DemandeController::class , 'uploadImage']);
+
+
+Route::get('/phpinfo', function (Request $request) {
+    dd(phpinfo());
+});
 

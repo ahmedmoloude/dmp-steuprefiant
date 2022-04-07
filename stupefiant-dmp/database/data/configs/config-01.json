@@ -27,7 +27,11 @@
             "position": 1,
             "ancestor_position": [1],
             "validator": {
-              "type": "number"
+              "type": "multi-input",
+              "params": {
+                "validator_id": "1",
+                "variant_id": "#to-g"
+              }
             }
           }
         },
@@ -46,7 +50,11 @@
             "position": 6,
             "ancestor_position": [4],
             "validator": {
-              "type": "number"
+              "type": "multi-input",
+              "params": {
+                "validator_id": "1",
+                "variant_id": "#to-g"
+              }
             }
           }
         }
@@ -57,7 +65,11 @@
             "position": 2,
             "ancestor_position": [2, 2],
             "validator": {
-              "type": "number"
+              "type": "multi-input",
+              "params": {
+                "validator_id": "1",
+                "variant_id": "#to-g"
+              }
             }
           },
           "label": "Stupéfiants"
@@ -67,7 +79,11 @@
             "position": 3,
             "ancestor_position": [2, 2],
             "validator": {
-              "type": "number"
+              "type": "multi-input",
+              "params": {
+                "validator_id": "1",
+                "variant_id": "#to-g"
+              }
             }
           },
           "label": "Produits exonérés"
@@ -77,7 +93,7 @@
             "position": 4,
             "ancestor_position": [3, 3],
             "validator": {
-              "type": "number"
+              "type": "file"
             }
           },
           "label": "PF"
@@ -87,7 +103,9 @@
             "position": 5,
             "ancestor_position": [3, 3],
             "validator": {
-              "type": "number"
+              "type": "callback",
+              "formula": "sum",
+              "entries": [1,2]
             }
           },
           "label": "MP"
@@ -103,6 +121,78 @@
       },
       {
         "label": "Bézitramide"
+      },
+      {
+        "label": "Canabis"
+      },
+      {
+        "label": "Canabis (résine de)"
+      },
+      {
+        "label": "Cétobémidone"
+      },
+      {
+        "label": "Coca (feuille de)"
+      },
+      {
+        "label": "Cocaine"
+      },
+      {
+        "label": "Codéine"
+      },
+      {
+        "label": "Dextromoramide"
+      },
+      {
+        "label": "Dextroproproxyphéne"
+      },
+      {
+        "label": "Difénoxine"
+      },
+      {
+        "label": "Dihydrocodéine"
+      },
+      {
+        "label": "Diphénoxylate"
+      },
+      {
+        "label": "Dipipanone"
+      },
+      {
+        "label": "Ethylmorphine"
+      },
+      {
+        "label": "Héroine"
+      },
+      {
+        "label": "Hydrocodone"
+      },
+      {
+        "label": "Hydromorphone"
+      },
+      {
+        "label": "Lévophanol"
+      },
+      {
+        "label": "Méthadone"
+      },
+      {
+        "label": "Morphine"
+      },
+      {
+        "label": "Nicomorphine"
+      },
+      {
+        "label": "Norméthadone"
+      },
+      {
+        "label": "Opium"
+      },
+      {
+        "label": "Oripavine"
+      },
+      {
+        "label": "Autre"
       }
     ]
   }

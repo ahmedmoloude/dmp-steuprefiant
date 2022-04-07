@@ -1,0 +1,76 @@
+{
+  "config" : {
+
+  "origin": "SUBSTANCE",
+  "x_axis": [
+    [
+      {
+        "label": "Quantité qui sera consommée pour les besoins médicaux et scientifiques",
+        "rowSpan": 2,
+        "isXAxis": {
+          "position": 1,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "Quantité (Base anhydre) qui sera utilisée pour la fabrication",
+        "rowSpan": 2,
+        "isXAxis": {
+          "position": 2,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "Quantité (Base anhydre) qui sera importée sous forme de",
+        "colSpan": 2
+      }
+    ],
+    [
+      {
+        "label": "PF",
+        "isXAxis": {
+          "ancestor_position": [3],
+          "position": 3,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "MP",
+        "isXAxis": {
+          "ancestor_position": [3],
+          "position": 4,
+          "validator": {
+            "type": "number"
+          }
+        }
+      }
+    ]
+  ],
+  "y_axis": [
+    {
+      "label": "EPHEDRINE"
+    },
+    {
+      "label": "PSEUDOEPHEDRINE"
+    },
+    {
+      "label": "3,4-METHYLENEDIOXYPHENYL-2-PROPANE"
+    },
+    {
+      "label": "PHENYL-IPROPANONE-2"
+    },
+    {
+      "label": "ACETONE"
+    },
+    {
+      "label": "Autre"
+    }
+  ]
+}
+}
