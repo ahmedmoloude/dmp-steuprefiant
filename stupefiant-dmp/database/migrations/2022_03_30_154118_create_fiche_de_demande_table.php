@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fichie_de_demandes', function (Blueprint $table) {
+        Schema::create('fiche_de_demandes', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->json("nature_de_element");
-            $table->enum('year', ["increment" , "decrement"]);
+            $table->json("config");
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fichie_de_demande');
+        Schema::dropIfExists('fiche_de_demandes');
     }
 };

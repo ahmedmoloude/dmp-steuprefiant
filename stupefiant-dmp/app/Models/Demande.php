@@ -9,17 +9,19 @@ class Demande extends Model
 {
     use HasFactory;
 
-    protected $table = 'demande';
-
+    protected $table = 'demandes';
 
     protected $fillable = [
-        "name",
         "client_id" ,
+        "name",
         "year",
-        "nature_de_element" ,
         "data",
-        "config"
+        "status"
     ];
     
+    public function tables()
+    {
+        return $this->hasMany('App\Models\TableData' , 'demande_id' , 'id');
+    }
 
 }

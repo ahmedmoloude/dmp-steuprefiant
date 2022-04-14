@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -27,13 +26,6 @@ class configSeeder extends Seeder
         $jsonSeven = File::get("database/data/configs/config-07.json");
         $jsonEight = File::get("database/data/configs/config-08.json");
 
-
-
-
-
-        // $jsonTwo = File::get("database/data/configs/config-15-02.json");
-
-          
 
         DB::table('configs')->insert(
             [

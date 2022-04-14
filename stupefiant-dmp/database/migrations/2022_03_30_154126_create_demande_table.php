@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('demande', function (Blueprint $table) {
+        Schema::create('demandes', function (Blueprint $table) {
             $table->id();
             $table->integer("client_id");
             $table->string("name");
             $table->string("year");
-            $table->string("nature_de_element");
-            $table->json("config");
             $table->json("data");
-            $table->enum('status', ['Pending',"Accepted","rejected"])->default('Pending');
+            $table->enum('status', ['Pending',"Accepted","Rejected"])->default('Pending');
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('demande');
+        Schema::dropIfExists('demandes');
     }
 };

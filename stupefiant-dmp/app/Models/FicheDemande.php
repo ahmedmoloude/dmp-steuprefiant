@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class fichieDedemande extends Model
+class FicheDemande extends Model
 {
     use HasFactory;
 
-
-    protected $table = 'fichie_de_demandes';
+    protected $table = 'fiche_de_demandes';
 
 }

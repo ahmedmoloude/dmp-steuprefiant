@@ -3,31 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Demande;
+use App\Models\TableData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 
 class DemandeController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
+{   
     /**
      * Store a newly created resource in storage.
      *
@@ -40,38 +22,39 @@ class DemandeController extends Controller
             'name' => 'required',
             'client_id' => 'required',
             'year' => 'required',
-            'config_and_data' => 'required|array',
+            'data' => 'required',
+            'tables' => 'required|array',
         ]);
 
         if($validator->fails()) {
             return response()->json("Une donnée transmise n\'est pas conforme.", 400);
         }
 
-        $config_and_data = collect($request->config_and_data)->groupBy('label');
-        
-        foreach ($config_and_data as $key => $item) {
-            $array_data = $config_and_data[$key]->pluck('data');
-            $array_config = $config_and_data[$key]->pluck('config');
-            
+        DB::beginTransaction();
+        try{
             $demande = Demande::create([
                 "name" => $request->name,
                 "client_id" => $request->client_id,
                 "year" => $request->year,
-                "nature_de_element" => $key,
-                "data" => $array_data,
-                "config" => $array_config
+                "data" => json_encode($request->data)
             ]);
 
+            $tables = $request->tables;
+            foreach($tables as $t){
+                TableData::create([
+                    "config" => json_encode($t['config']),
+                    "data" => json_encode($t['data']),
+                    "on_depend_id" => $t['on_depend_id'],
+                    "demande_id" => $demande->id,
+                ]);
+            }
+        } catch(\Exception $e){
+            //dd($e->getMessage());
+            DB::rollback();
+            return response()->json("Bad request !", 400);
         }
-        return  response()->json("created" , 201) ;
-
-
-        // try{
-        // } catch(\Exception $e){
+        DB::commit();
         
-        //     return  response()->json("Bad request !", 400);
-        // }
-
         return response($demande, 201);
     }
 
@@ -81,65 +64,42 @@ class DemandeController extends Controller
      * @param  \App\Models\Demande  $demande
      * @return \Illuminate\Http\Response
      */
-    public function show(Demande $demande)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Demande  $demande
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Demande $demande)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Demande  $demande
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Demande $demande)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Demande  $demande
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Demande $demande)
-    {
-        //
-    }
-
-
+    public function show($id)
+    {   
+        try{
+            $demande = Demande::where('id' , $id)->with('tables')->first();
+            if(!isset($demande)){
+                return response()->json("Not found !", 404);
+            }
+            return response($demande);  
+        }catch(\Exception $e){
+            return response()->json("Bad request !", 400);
+        }
+    } 
     
-    public function getByClinetID(Request $request)
-    {
-        $client_id = $request->query('id');
-        $demande = Demande::where("client_id" , $client_id)->get();
-        return response($demande);
+
+    /* List demandes by client */
+    public function getDemandeByClientId(Request $request)
+    {   
+        try{
+            $client_id = $request->query('id');
+            $demande = Demande::where("client_id" , $client_id)->with('tables')->get();
+            return response($demande);
+
+        } catch(\Exception $e){
+            return response()->json("Bad request !", 400);
+        }
     }
 
-
+    /* Upload file */
     public function uploadImage(Request $request)
     {
         $image = $request->file('file');
         try {
-                $fname = $image->getClientOriginalName();
-                $image->move(storage_path("/app/public/cdn/images"), $fname);
-                return response(['file_name' => "storage/cdn/images/".$fname], 201);
-        
+            $fname = $image->getClientOriginalName();
+            $image->move(storage_path("/app/public/cdn/images"), $fname);
+            return response(['file_name' => "storage/cdn/images/".$fname], 201);
         } catch (Exception $ex) {
-
             return response(['message' => "Images::noUpploaded " . $ex->getMessage()], 500);
         }
     }

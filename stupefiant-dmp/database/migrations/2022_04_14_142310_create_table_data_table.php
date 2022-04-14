@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('configs', function (Blueprint $table) {
+        Schema::create('table_data', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
             $table->json("config");
+            $table->json("data");
+            $table->string("on_depend_id");
+            $table->unsignedBigInteger('demande_id')->nullable();
+            $table->foreign('demande_id')->references('id')->on('demandes')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('configs');
+        Schema::dropIfExists('table_data');
     }
 };

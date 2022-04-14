@@ -1,0 +1,246 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "multichoice-checkbox",
+            "libelle": "Nature de l’élément",
+            "children": [
+                {
+                    "id": "1-1",
+                    "libelle": "Stupéfiant",
+                    "depening_elements": [
+                        {
+                            "type": "table",
+                            "id": "3"
+                        },
+                        {
+                            "type": "table",
+                            "id": "4"
+                        }
+                    ]
+                },
+                {
+                    "id": "2-1",
+                    "libelle": "Psychotropes",
+                    "depening_elements": [
+                        {
+                            "type": "table",
+                            "id": "5"
+                        }
+                    ]
+                },
+                {
+                    "id": "3-1",
+                    "libelle": "Précurseurs Chimiques",
+                    "depening_elements": [
+                        {
+                            "type": "table",
+                            "id": "5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "type": "form-groupe",
+            "libelle": "Renseignements relatifs à l’élément à importer",
+            "children": [
+                {
+                    "id": "1-2",
+                    "libelle": "Dénomination Commune Internationale (DCI)",
+                    "type": "text"
+                },
+                {
+                    "id": "2-2",
+                    "libelle": "Nature du sel",
+                    "type": "text"
+                },
+                {
+                    "id": "3-2",
+                    "libelle": "Référence de l’AMM",
+                    "type": "text"
+                },
+                {
+                    "id": "4-2",
+                    "libelle": "Statut de l’AMM",
+                    "type": "select",
+                    "children": [
+                        {
+                            "id": "4-2-1",
+                            "libelle": "Fabrication"
+                        },
+                        {
+                            "id": "4-2-2",
+                            "libelle": "Importation"
+                        },
+                        {
+                            "id": "4-2-3",
+                            "libelle": "Dérogation à l’importation",
+                            "depening_elements": [
+                                {
+                                    "type": "file",
+                                    "id": "7-2"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4-2-4",
+                            "libelle": "Médicament en cours d’enregistrement",
+                            "depening_elements": [
+                                {
+                                    "type": "file",
+                                    "id": "8-2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "5-2",
+                    "libelle": "Nature du produit",
+                    "type": "select",
+                    "children": [
+                        {
+                            "id": "5-2-1",
+                            "libelle": "Matière première"
+                        },
+                        {
+                            "id": "5-2-2",
+                            "libelle": "Dénomination commerciale (Produit fini)",
+                            "depening_elements": [
+                                {
+                                    "type": "file",
+                                    "id": "9-2"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5-2-3",
+                            "libelle": "Présentation et Dosage  (Produit fini",
+                            "depening_elements": [
+                                {
+                                    "type": "file",
+                                    "id": "9-2"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5-2-4",
+                            "libelle": "Produit intermédiaire"
+                        },
+                        {
+                            "id": "5-2-5",
+                            "libelle": "Substance de référence"
+                        },
+                        {
+                            "id": "5-2-6",
+                            "libelle": "Impureté"
+                        }
+                    ]
+                },
+                {
+                    "id": "7-2",
+                    "libelle": "Une copie du document justifiant la dérogation",
+                    "type": "file",
+                    "visible": false
+                },
+                {
+                    "id": "8-2",
+                    "libelle": "Une copie de la recevabilité, en cas de spécialité cours d’enregistrement",
+                    "type": "file",
+                    "visible": false
+                },
+                {
+                    "id": "9-2",
+                    "libelle": "Une copie de l’AMM",
+                    "type": "file",
+                    "visible": false
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "type": "table",
+            "config_id": "6"
+        },
+        {
+            "id": "4",
+            "type": "table",
+            "config_id": "4"
+        },
+        {
+            "id": "5",
+            "type": "table",
+            "config_id": "5"
+        },
+        {
+            "id": "6",
+            "type": "form-groupe",
+            "libelle": "Données Fournisseurs",
+            "children": [
+                {
+                    "id": "6-1",
+                    "libelle": "Nom du fournisseur",
+                    "type": "text"
+                },
+                {
+                    "id": "6-2",
+                    "libelle": "Adresse du fournisseur",
+                    "type": "text"
+                },
+                {
+                    "id": "6-3",
+                    "libelle": "Pays",
+                    "type": "text"
+                },
+                {
+                    "id": "6-4",
+                    "libelle": "Si différent du fournisseur, renseigner ",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "type": "form-groupe",
+            "libelle": "Renseignements sur le bureau de douane d’entrée",
+            "children": [
+                {
+                    "id": "7-1",
+                    "libelle": "Nom du bureau de douane",
+                    "type": "text"
+                },
+                {
+                    "id": "7-2",
+                    "libelle": "Adresse du bureau de douane",
+                    "type": "text"
+                },
+                {
+                    "id": "7-3",
+                    "libelle": "Date prévue d’entrée",
+                    "type": "text"
+                },
+                {
+                    "id": "7-4",
+                    "libelle": "Mode de transport",
+                    "type": "select",
+                    "children": [
+                        {
+                            "id": "7-4-1",
+                            "libelle": "Air"
+                        },
+                        {
+                            "id": "7-4-2",
+                            "libelle": "Mer"
+                        },
+                        {
+                            "id": "7-4-3",
+                            "libelle": "Terre"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

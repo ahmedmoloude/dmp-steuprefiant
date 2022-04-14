@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConfigController;
-use App\Http\Controllers\fichieDedemandeController;
+use App\Http\Controllers\FicheDemandeController;
 use App\Http\Controllers\DemandeController;
 
 
@@ -23,13 +23,21 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::resource('/configs', ConfigController::class);
-Route::resource('/fichie_demande', fichieDedemandeController::class);
-Route::resource('/demande', DemandeController::class);
+//Route::post('/configs', [ConfigController::class , 'getConfigs']);
+//Route::resource('/fiche_demandes', FicheDemandeController::class);
 
-Route::post('/configs', [ConfigController::class , 'getConfigs']);
-Route::get('/client_demande', [DemandeController::class , 'getByClinetID']);
+/* tables configs */
+Route::get('/configs', [ConfigController::class , 'index']);
+Route::get('/configs/{config}', [ConfigController::class , 'show']);
 
+/* fiche de demandes */
+Route::get('/fiche_demandes', [FicheDemandeController::class , 'index']);
+Route::get('/fiche_demandes/{ficheDemande}', [FicheDemandeController::class ,'show']);
+
+/* demandes */
+Route::get('/client_demandes', [DemandeController::class , 'getDemandeByClientId']);
+Route::get('/demandes/{id}', [DemandeController::class, 'show']);
+Route::post('/demandes', [DemandeController::class , 'store']);
 Route::post('/upload', [DemandeController::class , 'uploadImage']);
 
 
