@@ -1,0 +1,173 @@
+
+
+{
+    "data": [
+        {
+         "id" : "1",
+         "type": "multichoice-checkbox",
+         "libelle" : "Nature de l’élément",
+         "children" : [
+             {
+               "id" : "1-1",
+               "libelle" : "Stupéfiant"
+             },
+             {
+               "id" : "1-2",
+               "libelle" : "Psychotropes"
+             },
+             {
+               "id" : "1-3",
+               "libelle" : "Précurseurs Chimiques"
+             }
+         ]
+        },
+        {
+          "id" : "2",
+          "type": "radio-btns",
+          "libelle" : "Nature de la déclaration",
+          "children" : [
+              {
+                "id" : "2-1",
+                "libelle" : "Déclaration de réception",
+                "depening_elements" : [
+                  {
+                     "type" : "table",
+                     "id" : "5"
+                  }            
+                ]   
+              },
+              {
+                "id" : "2-2",
+                "libelle" : "Déclaration d'exportation",
+                "depening_elements" : [
+                  {
+                     "type" : "table",
+                     "id" : "6"
+                  }            
+                ]   
+              }
+          ]
+      },
+      {
+        "id" : "3",
+        "type" : "form-groupe",
+        "libelle" : "Renseignements relatifs à l’élément à importer",
+        "children" : [
+           {
+              "id" : "1-3",
+              "libelle" : "Dénomination Commune Internationale (DCI)",
+              "type" : "text"
+           },
+           {
+              "id" : "2-3",
+              "libelle" : "Nature du sel",
+              "type" : "text"
+           },
+           {
+              "id" : "3-3",
+              "libelle" : "Référence de l’AMM",
+              "type" : "text"
+           },
+           {
+              "id" : "4-3",
+              "libelle" : "Statut de l’AMM",
+              "type" : "select",
+              "children" : [
+                   {
+                     "id" : "4-3-1",
+                     "libelle" : "Fabrication"
+                   },
+                   {
+                        "id" : "4-3-2",
+                     "libelle" : "Importation"
+                   },
+                   {
+                     "id" : "4-3-3",
+                     "libelle" : "Dérogation à l’importation"    
+                      
+                   },
+                  {
+                     "id" : "4-3-4",
+                     "libelle" : "Médicament en cours d’enregistrement"
+                  }
+                      
+              ]
+           },
+           {
+              "id" : "5-2",
+              "libelle" : "Nature du produit",
+              "type" : "select",
+              "children" : [
+                   {
+                     "id" : "5-2-1",
+                     "libelle" : "Matière première"
+                   },
+                   {
+                    "id" : "5-2-2",
+                    "libelle" : "Dénomination commerciale (Produit fini)"
+                  },
+                  {
+                    "id" : "5-2-3",
+                    "libelle" : "Présentation et Dosage  (Produit fini"
+                  },
+                   {
+                     "id" : "5-2-4",
+                     "libelle" : "Produit intermédiaire"
+                   },
+                   {
+                       "id" : "5-2-5",
+                       "libelle" : "Substance de référence"
+                   },
+                   {
+                       "id" : "5-2-6",
+                       "libelle" : "Impureté"
+                  }     
+              ]
+           }
+          ]
+      },
+      {
+        "id" : "4",
+        "type" : "year",
+        "libelle" : "Année de la déclaration",
+        "year_config" : "decrement"
+      },
+      {
+        "id" : "5",
+        "type" : "table",
+        "config_id" : "5"
+      },
+      {
+        "id" : "6",
+        "type" : "table",
+        "config_id" : "6"
+      },
+      {
+        "id" : "7",
+        "type" : "form-groupe",
+        "libelle" : "Données Fournisseurs",
+        "children" : [
+           {
+              "id" : "7-1",
+              "libelle" : "Nom du fournisseur",
+              "type" : "text"
+           },
+           {
+              "id" : "7-2",
+              "libelle" : "Adresse du fournisseur",
+              "type" : "text"
+                    },
+           {
+              "id" : "7-3",
+              "libelle" : "Pays",
+              "type" : "text"
+                    },
+           {
+              "id" : "7-4",
+              "libelle" : "Si différent du fournisseur, renseigner ",
+              "type" : "text"
+           }
+          ]
+      }
+   ]
+}

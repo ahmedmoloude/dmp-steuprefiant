@@ -1,57 +1,152 @@
 {
-  "config" : {
-
-  "origin": "DCI",
-  "x_axis": [
-    [
-      {
-        "label": "Numéro et Date de l'Autorisation",
-        "isXAxis": {
-          "position": 1,
-          "validator": {
-            "type": "text"
+    "config" : {
+        "origin": "Quantités",
+        "x_axis": [
+          [
+            {
+              "label": "Matière Première (g, kg)",
+              "isXAxis": {
+                "position": 1,
+                "validator": {
+                  "type": "number"
+                }
+              }
+            },
+            {
+              "label": "Produit fini (unité)",
+              "isXAxis": {
+                "position": 2,
+                "validator": {
+                  "type": "number"
+                }
+              }
+            },
+            {
+                "label": "Substance de Référence (g, mg , microg)",
+                "isXAxis": {
+                  "position": 3,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            },
+            {
+                "label": "Vrac (unité, g, Kg)",
+                "isXAxis": {
+                  "position": 4,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            },
+            {
+                "label": "Intermédiaire (g, Kg)",
+                "isXAxis": {
+                  "position": 5,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            },
+            {
+                "label": "Impureté (g, mg , microg)",
+                "isXAxis": {
+                  "position": 6,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            }
+          ]
+        ],
+        "y_axis": [
+          {
+            "label": "Quantité à importer en sel"
+          },
+          {
+            "label": "Facteur de conversion"
+          },
+          {
+            "label": "Quantité à importer en Base Anhydre"
+          },
+          {
+            "label": "Nombre de boites à importer PF"
+          },
+          {
+            "label": "Motif de l’annulation"
           }
-        }
-      },
-      {
-        "label": "Quantité autorisée",
-        "isXAxis": {
-          "position": 2,
-          "validator": {
-            "type": "number"
-          }
-        }
-      },
-      {
-        "label": "Provenance",
-        "isXAxis": {
-          "position": 3,
-          "validator": {
-            "type": "text"
-          }
-        }
-      },
-      {
-        "label": "Destination",
-        "isXAxis": {
-          "position": 4,
-          "validator": {
-            "type": "text"
-          }
-        }
-      }
-    ]
-  ],
-  "y_axis": [
-    {
-      "label": ""
-    },
-    {
-      "label": ""
-    },
-    {
-      "label": ""
-    }
-  ]
-}
-}
+        ],
+        "cell_validators": [
+            {
+              "x": 1,
+              "y": 4,
+              "validator": {
+                "type": "read-only"
+              }
+            },
+            {
+                "x": 2,
+                "y": 1,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 2,
+                "y": 2,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 2,
+                "y": 3,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 3,
+                "y": 4,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 4,
+                "y": 1,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 4,
+                "y": 2,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 4,
+                "y": 3,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 5,
+                "y": 4,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 6,
+                "y": 4,
+                "validator": {
+                  "type": "read-only"
+                }
+            }
+        ]
+  }}
+  

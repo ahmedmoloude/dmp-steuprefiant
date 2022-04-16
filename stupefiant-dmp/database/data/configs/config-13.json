@@ -1,0 +1,176 @@
+{
+  "config" : {
+  "origin": "DCI",
+  "x_axis": [
+    [
+      {
+        "label": "NOM DE LA SPECIALITE PRESENTATION ET DOSAGE",
+        "rowSpan": 2,
+        "isXAxis": {
+          "position": 1,
+          "validator": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "label": "Quantité détenue en stock au 31 Décembre AAAA-1",
+        "colSpan": 2
+      },
+      {
+        "label": "Quantité de PSO détenue en stock non encore libérée au 31 Décembre AAAA",
+        "colSpan": 2
+      },
+      {
+        "label": "Quantité détenue en stock au 31 Décembre AAAA ",
+        "colSpan": 2
+      },
+      {
+        "label": "Quantité périmée détenue en stock au 31 Décembre AAAA  B.A",
+        "rowSpan": 2,
+        "isXAxis": {
+          "position": 8,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "Quantité périmée détruite au cours de l'année AAAA",
+        "colSpan": 2
+      },
+      {
+        "label": "Lots non-conformes détruits au cours de l'année AAAA",
+        "colSpan": 2
+      },
+      {
+        "label": "Total",
+        "rowSpan": 2,
+        "isXAxis": {
+          "position": 13,
+          "validator": {
+            "type": "callback",
+            "formula": "sum",
+            "entries": [3, 5, 7, 8, 9, 11]
+          }
+        }
+      }
+    ],
+    [
+      {
+        "label": "Nombre de boites",
+        "isXAxis": {
+          "ancestor_position": [2],
+          "position": 2,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "B.A",
+        "isXAxis": {
+          "ancestor_position": [2],
+          "position": 3,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "SEL",
+        "isXAxis": {
+          "ancestor_position": [3],
+          "position": 4,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "B.A",
+        "isXAxis": {
+          "ancestor_position": [3],
+          "position": 5,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "Nombre de boites",
+        "isXAxis": {
+          "ancestor_position": [4],
+          "position": 6,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "B.A",
+        "isXAxis": {
+          "ancestor_position": [4],
+          "position": 7,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "B.A",
+        "isXAxis": {
+          "ancestor_position": [6],
+          "position": 9,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "PV destruction",
+        "isXAxis": {
+          "ancestor_position": [6],
+          "position": 10,
+          "validator": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "label": "B.A",
+        "isXAxis": {
+          "ancestor_position": [7],
+          "position": 11,
+          "validator": {
+            "type": "number"
+          }
+        }
+      },
+      {
+        "label": "PV destruction",
+        "isXAxis": {
+          "ancestor_position": [8],
+          "position": 12,
+          "validator": {
+            "type": "text"
+          }
+        }
+      }
+    ]
+  ],
+  "y_axis": [
+    {
+      "label": ""
+    },
+    {
+      "label": ""
+    },
+    {
+      "label": ""
+    },
+    {
+      "label": ""
+    }
+  ]
+}}

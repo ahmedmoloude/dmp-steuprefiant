@@ -1,66 +1,137 @@
 {
-  "config" : {
-
-  "origin": "DCI",
-  "x_axis": [
-    [
-      {
-        "label": "Quantité achetée (Sel)",
-        "isXAxis": {
-          "position": 1,
-          "validator": {
-            "type": "number"
+    "config" : {
+        "origin": "Quantités",
+        "x_axis": [
+          [
+            {
+              "label": "Produit fini (unités en nombre de boites)",
+              "isXAxis": {
+                "position": 1,
+                "validator": {
+                  "type": "number"
+                }
+              }
+            },
+            {
+              "label": "Substance de Référence (g, mg , microg)",
+              "isXAxis": {
+                "position": 2,
+                "validator": {
+                  "type": "number"
+                }
+              }
+            },
+            {
+                "label": "Vrac (unité, g, Kg) ",
+                "isXAxis": {
+                  "position": 3,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            },
+            {
+                "label": "Intermédiaire (g, Kg)",
+                "isXAxis": {
+                  "position": 4,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            },
+            {
+                "label": "Impureté (g, mg , microg)",
+                "isXAxis": {
+                  "position": 5,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            }
+          ]
+        ],
+        "y_axis": [
+          {
+            "label": "Quantité à importer en sel"
+          },
+          {
+            "label": "Facteur de conversion (Utiliser Pharmacopées en vigueur au Maroc / Utiliser Site internet OICS)"
+          },
+          {
+            "label": "Quantité à importer en Base Anhydre"
+          },
+          {
+            "label": "Nombre de boites à importer pour PF et Quantité en Base anhydre pour Vrac"
+          },
+          {
+            "label": "Utilisation Finale du produit à spécifier (Enregistrement / Analyse / Commercialisation)"
           }
-        }
-      },
-      {
-        "label": "Quantité achetée (Base anhydre)",
-        "isXAxis": {
-          "position": 2,
-          "validator": {
-            "type": "number"
-          }
-        }
-      },
-      {
-        "label": "Nom et adresse du fournisseur local",
-        "isXAxis": {
-          "position": 3,
-          "validator": {
-            "type": "text"
-          }
-        }
-      },
-      {
-        "label": "Utilisation finale",
-        "isXAxis": {
-          "position": 4,
-          "validator": {
-            "type": "text"
-          }
-        }
-      },
-      {
-        "label": "Stock restant au 3 Décembre AAAA",
-        "isXAxis": {
-          "position": 5,
-          "validator": {
-            "type": "number"
-          }
-        }
-      }
-    ]
-  ],
-  "y_axis": [
-    {
-      "label": ""
-    },
-    {
-      "label": ""
-    },
-    {
-      "label": ""
-    }
-  ]
-}
-}
+        ],
+        "cell_validators": [
+            {
+              "x": 1,
+              "y": 1,
+              "validator": {
+                "type": "read-only"
+              }
+            },
+            {
+                "x": 1,
+                "y": 2,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 1,
+                "y": 3,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 2,
+                "y": 4,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 3,
+                "y": 1,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 3,
+                "y": 2,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 3,
+                "y": 3,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 4,
+                "y": 4,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 5,
+                "y": 4,
+                "validator": {
+                  "type": "read-only"
+                }
+            }
+          ]
+            
+  }}
+  

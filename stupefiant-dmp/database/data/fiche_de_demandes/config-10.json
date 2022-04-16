@@ -1,0 +1,46 @@
+
+
+{
+
+   
+  "data" : [
+      {
+         
+            "id" : "1",
+            "type": "radio-btns",
+            "libelle" : "Nature de la déclaration",
+            "children" : [
+                {
+                  "id" : "1-1",
+                  "libelle" : "Utilisation de matière première",
+                  "depening_elements" : [
+                    {
+                       "type" : "table",
+                       "id" : "2"
+                    }            
+                  ]   
+                },
+                {
+                  "id" : "1-2",
+                  "libelle" : "Utilisation de Substance de référence",
+                  "depening_elements" : [
+                    {
+                       "type" : "table",
+                       "id" : "3"
+                    }            
+                  ]   
+                }
+            ]
+      },
+      {
+        "id" : "2",
+        "type" : "table",
+        "config_id" : "12"
+      },
+      {
+         "id" : "3",
+         "type" : "table",
+         "config_id" : "12"
+      }
+  ]
+}

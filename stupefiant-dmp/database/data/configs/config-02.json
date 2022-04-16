@@ -1,71 +1,23 @@
 {
-    
-  "config" :   {
-    "origin": "DCI",
+  "config" : {
+    "origin": "Substance",
     "x_axis": [
       [
         {
-          "label": "Numéro et Date de l'Autorisation exportation",
+          "label": "Kilogrammes",
           "isXAxis": {
             "position": 1,
             "validator": {
-              "type": "text"
+              "type": "number"
             }
           }
         },
         {
-          "label": "Nom de la spécialité Présentation et dosage",
+          "label": "grammes",
           "isXAxis": {
             "position": 2,
             "validator": {
-              "type": "text"
-            }
-          }
-        },
-        {
-          "label": "Quantité exportée (nombre de boites)",
-          "isXAxis": {
-            "position": 3,
-            "validator": {
               "type": "number"
-            }
-          }
-        },
-        {
-          "label": "Quantité exportée (Sel)",
-          "isXAxis": {
-            "position": 4,
-            "validator": {
-              "type": "number"
-            }
-          }
-        },
-        {
-          "label": "Quantité exportée (Base Anhydre)",
-          "isXAxis": {
-            "position": 5,
-            "validator": {
-              "type": "number"
-            }
-          }
-        },
-        {
-          "label": "Pays de destination",
-          "isXAxis": {
-            "position": 6,
-            "validator": {
-              "type": "text"
-            }
-          }
-        },
-        {
-          "label": "Total de substance exportée par le pays (Base Anhydre)",
-          "isXAxis": {
-            "position": 7,
-            "validator": {
-              "type": "callback",
-              "formula": "sum",
-              "entries": [5]
             }
           }
         }
@@ -73,14 +25,274 @@
     ],
     "y_axis": [
       {
-        "label": "DCI 1",
-        "subRow": 2
+        "label": "Amfétamine"
       },
       {
-        "label": "DCI 2",
-        "subRow": 2
+        "label": "Amineptine"
+      },
+      {
+        "label": "2C-B"
+      },
+      {
+        "label": "Dexamfétamine"
+      },
+      {
+        "label": "Fénétylline"
+      },
+      {
+        "label": "Lévamfétamine"
+      },
+      {
+        "label": "Lévomethamphetamine"
+      },
+      {
+        "label": "Lévomethamphétamine"
+      },
+      {
+        "label": "Mécloqualone"
+      },
+      {
+        "label": "Métamfétamine"
+      },
+      {
+        "label": "Méthaqualone"
+      },
+      {
+        "label": "Méthylphenidate"
+      },
+      {
+        "label": "Phencyclidine"
+      },
+      {
+        "label": "Phenmétrazine"
+      },
+      {
+        "label": "Racémate de métamphétamine"
+      },
+      {
+        "label": "Sécobarbital"
+      },
+      {
+        "label": "*Delta-9-THC"
+      },
+      {
+        "label": "Zipéprol"
+      },
+      {
+        "label": "Amobarbital"
+      },
+      {
+        "label": "Buprénorphine"
+      },
+      {
+        "label": "Butalbital"
+      },
+      {
+        "label": "Cathine"
+      },
+      {
+        "label": "Cyclobarbital"
+      },
+      {
+        "label": "Flunitrazepam"
+      },
+      {
+        "label": "Glutéthimide"
+      },
+      {
+        "label": "Pentazocine"
+      },
+      {
+        "label": "Pentobarbital"
+      },
+      {
+        "label": "Autre"
+      },
+      {
+        "label": "Allobarbital"
+      },
+      {
+        "label": "Alprazolam"
+      },
+      {
+        "label": "Amfépramone"
+      },
+      {
+        "label": "Aminorex"
+      },
+      {
+        "label": "Barbital"
+      },
+      {
+        "label": "Benzfétamine"
+      },
+      {
+        "label": "Loflazépate d'éthyle"
+      },
+      {
+        "label": "Loprazolam"
+      },
+      {
+        "label": "Lorazépam"
+      },
+      {
+        "label": "Lormétazepam"
+      },
+      {
+        "label": "Mazindol"
+      },
+      {
+        "label": "Médazepam"
+      },
+      {
+        "label": "Méfénorex"
+      },
+      {
+        "label": "Méprobamate"
+      },
+      {
+        "label": "Mesocarbe"
+      },
+      {
+        "label": "Méthylphenobarbital"
+      },
+      {
+        "label": "Méthyprylone"
+      },
+      {
+        "label": "Midazolam"
+      },
+      {
+        "label": "Nimétazepam"
+      },
+      {
+        "label": "Nitrazepam"
+      },
+      {
+        "label": "Nordazepam"
+      },
+      {
+        "label": "Oxazepam"
+      },
+      {
+        "label": "Oxazolam"
+      },
+      {
+        "label": "Bromazépam"
+      },
+      {
+        "label": "Brotizolam"
+      },
+      {
+        "label": "Butobarbital"
+      },
+      {
+        "label": "Camazepam"
+      },
+      {
+        "label": "Chlordiazépoxide"
+      },
+      {
+        "label": "Clobazam"
+      },
+      {
+        "label": "Clonazepam"
+      },
+      {
+        "label": "Clorazepate"
+      },
+      {
+        "label": "Clotiazepam"
+      },
+      {
+        "label": "Cloxazolam"
+      },
+      {
+        "label": "Délorazepam"
+      },
+      {
+        "label": "Diazepam"
+      },
+      {
+        "label": "Estazolam"
+      },
+      {
+        "label": "Ethchlorvynol"
+      },
+      {
+        "label": "Éthinamate"
+      },
+      {
+        "label": "Étilamfetamine"
+      },
+      {
+        "label": "Fencamfamine"
+      },
+      {
+        "label": "Fenproporex"
+      },
+      {
+        "label": "Fludiazepam"
+      },
+      {
+        "label": "Flurazepam"
+      },
+      {
+        "label": "GHB"
+      },
+      {
+        "label": "Halazépam"
+      },
+      {
+        "label": "Haloxazolam"
+      },
+      {
+        "label": "Pémoline"
+      },
+      {
+        "label": "Phendimetrazine"
+      },
+      {
+        "label": "Phénobarbital"
+      },
+      {
+        "label": "Phentermine"
+      },
+      {
+        "label": "Pinazepam"
+      },
+      {
+        "label": "Pipradrol"
+      },
+      {
+        "label": "Prazépam"
+      },
+      {
+        "label": "Pyrovalérone"
+      },
+      {
+        "label": "Secbutabarbital"
+      },
+      {
+        "label": "Témazepam"
+      },
+      {
+        "label": "Tétrazépam"
+      },
+      {
+        "label": "Triazolam"
+      },
+      {
+        "label": "Vinylbital"
+      },
+      {
+        "label": "Zolpidem"
+      },
+      {
+        "label": "Kétazolam"
+      },
+      {
+        "label": "Léfétamine, SPA"
       }
-    ],
-    "y_axis_rowSpan": [7]
-  }
-}
+    ]
+}}

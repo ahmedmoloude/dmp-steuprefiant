@@ -5,16 +5,16 @@
   "x_axis": [
     [
       {
-        "label": "Numéro et Date de l'Autorisation",
+        "label": "Quantité achetée (Sel)",
         "isXAxis": {
           "position": 1,
           "validator": {
-            "type": "text"
+            "type": "number"
           }
         }
       },
       {
-        "label": "Quantité autorisée",
+        "label": "Quantité achetée (Base anhydre)",
         "isXAxis": {
           "position": 2,
           "validator": {
@@ -23,7 +23,7 @@
         }
       },
       {
-        "label": "Provenance",
+        "label": "Nom et adresse du fournisseur local",
         "isXAxis": {
           "position": 3,
           "validator": {
@@ -32,11 +32,20 @@
         }
       },
       {
-        "label": "Destination",
+        "label": "Utilisation finale",
         "isXAxis": {
           "position": 4,
           "validator": {
             "type": "text"
+          }
+        }
+      },
+      {
+        "label": "Stock restant au 3 Décembre AAAA",
+        "isXAxis": {
+          "position": 5,
+          "validator": {
+            "type": "number"
           }
         }
       }

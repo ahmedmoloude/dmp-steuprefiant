@@ -1,76 +1,152 @@
 {
-  "config" : {
-
-  "origin": "SUBSTANCE",
-  "x_axis": [
-    [
-      {
-        "label": "Quantité qui sera consommée pour les besoins médicaux et scientifiques",
-        "rowSpan": 2,
-        "isXAxis": {
-          "position": 1,
-          "validator": {
-            "type": "number"
+    "config" : {
+        "origin": "Quantités",
+        "x_axis": [
+          [
+            {
+              "label": "Matière Première (g, kg)",
+              "isXAxis": {
+                "position": 1,
+                "validator": {
+                  "type": "number"
+                }
+              }
+            },
+            {
+              "label": "Produit fini (unité)",
+              "isXAxis": {
+                "position": 2,
+                "validator": {
+                  "type": "number"
+                }
+              }
+            },
+            {
+                "label": "Substance de Référence (g, mg , microg)",
+                "isXAxis": {
+                  "position": 3,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            },
+            {
+                "label": "Vrac (unité, g, Kg)",
+                "isXAxis": {
+                  "position": 4,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            },
+            {
+                "label": "Intermédiaire (g, Kg)",
+                "isXAxis": {
+                  "position": 5,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            },
+            {
+                "label": "Impureté (g, mg , microg)",
+                "isXAxis": {
+                  "position": 6,
+                  "validator": {
+                    "type": "number"
+                  }
+                }
+            }
+          ]
+        ],
+        "y_axis": [
+          {
+            "label": "Quantité à importer en sel"
+          },
+          {
+            "label": "Facteur de conversion"
+          },
+          {
+            "label": "Quantité à importer en Base Anhydre"
+          },
+          {
+            "label": "Nombre de boites à importer PF"
+          },
+          {
+            "label": "Motif de l’annulation"
           }
-        }
-      },
-      {
-        "label": "Quantité (Base anhydre) qui sera utilisée pour la fabrication",
-        "rowSpan": 2,
-        "isXAxis": {
-          "position": 2,
-          "validator": {
-            "type": "number"
-          }
-        }
-      },
-      {
-        "label": "Quantité (Base anhydre) qui sera importée sous forme de",
-        "colSpan": 2
-      }
-    ],
-    [
-      {
-        "label": "PF",
-        "isXAxis": {
-          "ancestor_position": [3],
-          "position": 3,
-          "validator": {
-            "type": "number"
-          }
-        }
-      },
-      {
-        "label": "MP",
-        "isXAxis": {
-          "ancestor_position": [3],
-          "position": 4,
-          "validator": {
-            "type": "number"
-          }
-        }
-      }
-    ]
-  ],
-  "y_axis": [
-    {
-      "label": "EPHEDRINE"
-    },
-    {
-      "label": "PSEUDOEPHEDRINE"
-    },
-    {
-      "label": "3,4-METHYLENEDIOXYPHENYL-2-PROPANE"
-    },
-    {
-      "label": "PHENYL-IPROPANONE-2"
-    },
-    {
-      "label": "ACETONE"
-    },
-    {
-      "label": "Autre"
-    }
-  ]
-}
-}
+        ],
+        "cell_validators": [
+            {
+              "x": 1,
+              "y": 4,
+              "validator": {
+                "type": "read-only"
+              }
+            },
+            {
+                "x": 2,
+                "y": 1,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 2,
+                "y": 2,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 2,
+                "y": 3,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 3,
+                "y": 4,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 4,
+                "y": 1,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 4,
+                "y": 2,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 4,
+                "y": 3,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 5,
+                "y": 4,
+                "validator": {
+                  "type": "read-only"
+                }
+            },
+            {
+                "x": 6,
+                "y": 4,
+                "validator": {
+                  "type": "read-only"
+                }
+            }
+        ]
+  }}
+  

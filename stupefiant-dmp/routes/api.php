@@ -41,7 +41,4 @@ Route::post('/demandes', [DemandeController::class , 'store']);
 Route::post('/upload', [DemandeController::class , 'uploadImage']);
 
 
-Route::get('/phpinfo', function (Request $request) {
-    dd(phpinfo());
-});
 

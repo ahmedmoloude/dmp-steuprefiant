@@ -1,0 +1,91 @@
+{
+"config" : {
+    "origin": "",
+    "x_axis": [
+      [
+        {
+          "label": "Quantité Autorisée",
+          "colSpan": 3
+        },
+        {
+            "label": "Quantité Exportée",
+            "colSpan": 3
+        }
+      ],
+      [
+        {
+          "label": "Qté en sel",
+          "isXAxis": {
+            "ancestor_position": [1],
+            "position": 1,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+            "label": "Qté en Base Anhydre",
+            "isXAxis": {
+                "ancestor_position": [1],
+                "position": 2,
+                "validator": {
+                  "type": "number"
+                }
+              }
+        },
+        {
+            "label": "Nbre de boites  PF",
+            "isXAxis": {
+                "ancestor_position": [1],
+                "position": 3,
+                "validator": {
+                  "type": "number"
+                }
+              }
+        },
+        {
+            "label": "Qté en sel",
+            "isXAxis": {
+                "ancestor_position": [2],
+                "position": 4,
+                "validator": {
+                  "type": "number"
+                }
+              }
+        },
+        {
+              "label": "Qté en Base Anhydre",
+              "isXAxis": {
+                "ancestor_position": [2],
+                "position": 5,
+                "validator": {
+                  "type": "number"
+                }
+              }
+        },
+        {
+              "label": "Nbre de boites  PF",
+              "isXAxis": {
+                "ancestor_position": [2],
+                "position": 6,
+                "validator": {
+                  "type": "number"
+                }
+              }
+        }        
+      ]
+    ],
+    "y_axis": [
+      {
+        "label": ""
+      },
+      {
+        "label": ""
+      },
+      {
+        "label": ""
+      }
+    ]
+    
+  }}
+  

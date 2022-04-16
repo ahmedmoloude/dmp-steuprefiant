@@ -1,0 +1,68 @@
+
+
+{
+    "data": [
+        {
+         "id" : "1",
+         "type": "multichoice-checkbox",
+         "libelle" : "Nature de l’élément",
+         "children" : [
+             {
+               "id" : "1-1",
+               "libelle" : "Stupéfiant"
+             },
+             {
+               "id" : "1-2",
+               "libelle" : "Psychotropes"
+             },
+             {
+               "id" : "1-3",
+               "libelle" : "Précurseurs Chimiques"
+             }
+         ]
+       },
+       {
+          "id" : "2",
+          "type": "radio-btns",
+          "libelle" : "Nature de la déclaration",
+          "children" : [
+              {
+                "id" : "2-1",
+                "libelle" : "Utilisation de matière première",
+                "depening_elements" : [
+                  {
+                     "type" : "table",
+                     "id" : "4"
+                  }            
+                ]   
+              },
+              {
+                "id" : "2-2",
+                "libelle" : "Utilisation de Substance de référence",
+                "depening_elements" : [
+                  {
+                     "type" : "table",
+                     "id" : "5"
+                  }            
+                ]   
+              }
+          ]
+      },
+      {
+        "id" : "3",
+        "type" : "year",
+        "libelle" : "Année de la déclaration",
+        "year_config" : "decrement"
+      },
+      {
+        "id" : "4",
+        "type" : "table",
+        "config_id" : "3"
+      },
+      {
+        "id" : "5",
+        "type" : "table",
+        "config_id" : "4"
+      }
+   ]
+}

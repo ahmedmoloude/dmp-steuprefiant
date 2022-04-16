@@ -73,23 +73,11 @@
                   },
                   {
                     "id" : "4-2-3",
-                    "libelle" : "Dérogation à l’importation",
-                    "depening_elements" : [
-                      {
-                         "type" : "file",
-                         "id" : "7-2"
-                      }            
-                   ]    
+                    "libelle" : "Dérogation à l’importation"
                   },
                  {
                     "id" : "4-2-4",
-                    "libelle" : "Médicament en cours d’enregistrement",
-                    "depening_elements" : [
-                      {
-                         "type" : "file",
-                         "id" : "8-2"
-                      }            
-                   ]
+                    "libelle" : "Médicament en cours d’enregistrement"
                  }
                      
              ]
@@ -105,23 +93,11 @@
                   },
                   {
                    "id" : "5-2-2",
-                   "libelle" : "Dénomination commerciale (Produit fini)",
-                   "depening_elements" : [
-                    {
-                       "type" : "file",
-                       "id" : "9-2"
-                    }            
-                  ]
+                   "libelle" : "Dénomination commerciale (Produit fini)"
                  },
                  {
                    "id" : "5-2-3",
-                   "libelle" : "Présentation et Dosage  (Produit fini",
-                   "depening_elements" : [
-                    {
-                       "type" : "file",
-                       "id" : "9-2"
-                    }            
-                  ]
+                   "libelle" : "Présentation et Dosage  (Produit fini"
                  },
                   {
                     "id" : "5-2-4",
@@ -136,109 +112,40 @@
                       "libelle" : "Impureté"
                  }     
              ]
-          },
-          {
-             "id" : "7-2",
-             "libelle" : "Une copie du document justifiant la dérogation",
-             "type" : "file",
-             "visible" : false
-          },
-          {
-             "id" : "8-2",
-             "libelle" : "Une copie de la recevabilité, en cas de spécialité cours d’enregistrement",
-             "type" : "file",
-             "visible" : false
-          },
-          {
-             "id" : "9-2",
-             "libelle" : "Une copie de l’AMM",
-             "type" : "file",
-             "visible" : false
           }
          ]
      },  
      {
        "id" : "3",
        "type" : "table",
-       "config_id" : "7"
+       "config_id" : "9"
      },
      { 
        "id" : "4",
        "type" : "table",
-       "config_id" : "7"
+       "config_id" : "9"
      },
      {
        "id" : "5",
        "type" : "table",
-       "config_id" : "7"
+       "config_id" : "9"
      },
      {
        "id" : "6",
        "type" : "form-groupe",
-       "libelle" : "Données Fournisseurs",
+       "libelle" : "Renseignements sur l’autorisation d’importation/ exportation",
        "children" : [
           {
              "id" : "6-1",
-             "libelle" : "Nom du fournisseur",
+             "libelle" : "Numéro d’autorisation",
              "type" : "text"
           },
           {
              "id" : "6-2",
-             "libelle" : "Adresse du fournisseur",
-             "type" : "text"
-                   },
-          {
-             "id" : "6-3",
-             "libelle" : "Pays",
-             "type" : "text"
-                   },
-          {
-             "id" : "6-4",
-             "libelle" : "Si différent du fournisseur, renseigner ",
+             "libelle" : "Date d’expiration de l’autorisation",
              "type" : "text"
           }
          ]
-     },
-     {
-       "id" : "7",
-       "type" : "form-groupe",
-       "libelle" : "Renseignements sur le bureau de douane d’entrée",
-       "children" : [
-          {
-             "id" : "7-1",
-             "libelle" : "Nom du bureau de douane",
-             "type" : "text"
-          },
-          {
-             "id" : "7-2",
-             "libelle" : "Adresse du bureau de douane",
-             "type" : "text"
-          },
-          {
-             "id" : "7-3",
-             "libelle" : "Date prévue d’entrée",
-             "type" : "text"
-          },
-          {
-             "id" : "7-4",
-             "libelle" : "Mode de transport",
-             "type": "select",
-             "children" : [
-                 {
-                   "id" : "7-4-1",
-                   "libelle" : "Air"
-                 },
-                  {
-                   "id" : "7-4-2",
-                   "libelle" : "Mer"
-                 },
-                 {
-                   "id" : "7-4-3",
-                   "libelle" : "Terre"
-                 }
-               ]
-          }
-       ]
-    }
+     }
  ]
  }
