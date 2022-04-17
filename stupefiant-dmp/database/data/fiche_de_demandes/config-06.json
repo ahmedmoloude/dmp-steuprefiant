@@ -60,143 +60,105 @@
           },
           {
              "id" : "4-2",
-             "libelle" : "Statut de l’AMM",
-             "type" : "select",
-             "children" : [
-                  {
-                    "id" : "4-2-1",
-                    "libelle" : "Fabrication"
-                  },
-                  {
-                       "id" : "4-2-2",
-                    "libelle" : "Importation"
-                  },
-                  {
-                    "id" : "4-2-3",
-                    "libelle" : "Dérogation à l’importation",
-                    "depening_elements" : [
-                      {
-                         "type" : "file",
-                         "id" : "7-2"
-                      }            
-                   ]    
-                  },
-                 {
-                    "id" : "4-2-4",
-                    "libelle" : "Médicament en cours d’enregistrement",
-                    "depening_elements" : [
-                      {
-                         "type" : "file",
-                         "id" : "8-2"
-                      }            
-                   ]
-                 }
-                     
-             ]
-          },
-          {
-             "id" : "5-2",
              "libelle" : "Nature du produit",
              "type" : "select",
              "children" : [
                   {
-                    "id" : "5-2-1",
-                    "libelle" : "Matière première"
-                  },
-                  {
-                   "id" : "5-2-2",
+                   "id" : "4-2-2",
                    "libelle" : "Dénomination commerciale (Produit fini)",
                    "depening_elements" : [
                     {
                        "type" : "file",
-                       "id" : "9-2"
+                       "id" : "7-2"
                     }            
                   ]
                  },
                  {
-                   "id" : "5-2-3",
-                   "libelle" : "Présentation et Dosage  (Produit fini",
+                   "id" : "4-2-3",
+                   "libelle" : "Présentation et Dosage  (Produit fini)",
                    "depening_elements" : [
                     {
                        "type" : "file",
-                       "id" : "9-2"
+                       "id" : "7-2"
                     }            
                   ]
                  },
+                 {
+                    "id" : "4-2-1",
+                    "libelle" : "Vrac"
+                  },
                   {
-                    "id" : "5-2-4",
+                    "id" : "4-2-4",
                     "libelle" : "Produit intermédiaire"
                   },
                   {
-                      "id" : "5-2-5",
+                      "id" : "4-2-5",
                       "libelle" : "Substance de référence"
                   },
                   {
-                      "id" : "5-2-6",
+                      "id" : "4-2-6",
                       "libelle" : "Impureté"
-                 }     
+                  }     
              ]
           },
           {
              "id" : "7-2",
-             "libelle" : "Une copie du document justifiant la dérogation",
+             "libelle" : "Une copie de l’AMM",
              "type" : "file",
              "visible" : false
           },
           {
              "id" : "8-2",
-             "libelle" : "Une copie de la recevabilité, en cas de spécialité cours d’enregistrement",
-             "type" : "file",
-             "visible" : false
-          },
-          {
-             "id" : "9-2",
-             "libelle" : "Une copie de l’AMM",
-             "type" : "file",
-             "visible" : false
+             "libelle" : "Une copie de l’autorisation d’importation",
+             "type" : "file"
           }
          ]
      },  
      {
        "id" : "3",
        "type" : "table",
-       "config_id" : "7"
+       "config_id" : "8"
      },
      { 
        "id" : "4",
        "type" : "table",
-       "config_id" : "7"
+       "config_id" : "8"
      },
      {
        "id" : "5",
        "type" : "table",
-       "config_id" : "7"
+       "config_id" : "8"
      },
      {
        "id" : "6",
        "type" : "form-groupe",
-       "libelle" : "Données Fournisseurs",
+       "libelle" : "Données sur l’importateur",
        "children" : [
           {
              "id" : "6-1",
-             "libelle" : "Nom du fournisseur",
+             "libelle" : "Nom de l’importateur",
              "type" : "text"
           },
           {
              "id" : "6-2",
-             "libelle" : "Adresse du fournisseur",
+             "libelle" : "Adresse complète de l’importateur",
              "type" : "text"
                    },
           {
              "id" : "6-3",
              "libelle" : "Pays",
              "type" : "text"
-                   },
+          },
           {
              "id" : "6-4",
-             "libelle" : "Si différent du fournisseur, renseigner ",
+             "libelle" : "Réf de l’autorisation d’importation",
              "type" : "text"
-          }
+          },
+          {
+            "id" : "6-5",
+            "libelle" : "Date d’expiration",
+            "type" : "text"
+         }
          ]
      },
      {

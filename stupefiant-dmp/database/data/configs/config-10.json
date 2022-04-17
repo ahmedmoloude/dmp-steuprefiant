@@ -1,0 +1,84 @@
+{
+  "config" : {
+    "origin": "Substance",
+    "x_axis": [
+      [
+        {
+          "label": "1",
+          "colSpan": 2
+
+        },
+        {
+          "label": "2",
+          "colSpan": 2
+        }
+      ],
+      [
+        {
+            "label": "Evaluations initiales ou Prévisions initiales",
+            "colSpan": 2
+          },
+          {
+            "label": "Evaluations supplémentaires ou Prévisions supplémentaires",
+            "colSpan": 2
+          }
+      ],
+      [
+        {
+          "label": "Kg",
+          "isXAxis": {
+            "ancestor_position": [1],
+            "position": 1,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "label": "g",
+          "isXAxis": {
+            "ancestor_position": [1],
+            "position": 2,
+            "validator": {
+              "type": "number"
+            }
+          }
+        },
+
+        {
+            "label": "Kg",
+            "isXAxis": {
+              "ancestor_position": [2],
+              "position": 3,
+              "validator": {
+                "type": "number"
+              }
+            }
+          },
+          {
+            "label": "g",
+            "isXAxis": {
+              "ancestor_position": [2],
+              "position": 4,
+              "validator": {
+                "type": "number"
+              }
+            }
+          }
+      ]
+    ],
+    "y_axis": [
+      {
+        "label": ""
+      },
+      {
+        "label": ""
+      },
+      {
+        "label": ""
+      },
+      {
+        "label": ""
+      }
+    ]
+}}

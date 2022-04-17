@@ -1,0 +1,34 @@
+
+
+{
+  "data" : [
+      {
+          "id" : "1",
+          "type": "multichoice-checkbox",
+          "libelle" : "Nature de l’élément",
+          "children" : [
+              {
+                  "id" : "1-1",
+                  "libelle" : "Stupéfiant",
+                  "depening_elements" : [
+                      {
+                         "type" : "table",
+                         "id" : "3"
+                      }         
+                  ]
+              }       
+          ]
+      },
+      {
+        "id" : "2",
+        "type" : "year",
+        "libelle" : "Année de la déclaration",
+        "year_config" : "decrement"
+      },
+      {
+        "id" : "3",
+        "type" : "table",
+        "config_id" : "19"
+      }
+  ]
+}

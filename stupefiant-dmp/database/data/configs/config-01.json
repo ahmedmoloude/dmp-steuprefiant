@@ -1,199 +1,75 @@
-
 {
-"config" : {
-    "origin": "Substance",
-    "x_axis": [
-      [
-        {
-          "label": "1"
-        },
-        {
-          "label": "2",
-          "colSpan": 2
-        },
-        {
-          "label": "3",
-          "colSpan": 2
-        },
-        {
-          "label": "4"
-        }
-      ],
-      [
-        {
-          "label": "Quantité qui sera consommée pour les besoins médicaux scientifiques",
-          "rowSpan": 2,
-          "isXAxis": {
-            "position": 1,
-            "ancestor_position": [1],
-            "validator": {
-              "type": "multi-input",
-              "params": {
-                "validator_id": "1",
-                "variant_id": "#to-g"
-              }
-            }
-          }
-        },
-        {
-          "label": "Quantité (Base Anhydre) qui sera utilsée pour la fabrication de :",
-          "colSpan": 2
-        },
-        {
-          "label": "Quantité (Base Anhydre) qui sera importée sous forme de :",
-          "colSpan": 2
-        },
-        {
-          "label": "Quantité (Base Anhydre) qui sera détenu en stock le 31/12/AA :",
-          "rowSpan": 2,
-          "isXAxis": {
-            "position": 6,
-            "ancestor_position": [4],
-            "validator": {
-              "type": "multi-input",
-              "params": {
-                "validator_id": "1",
-                "variant_id": "#to-g"
-              }
-            }
+  "config" : {
+  "origin": "SUBSTANCE",
+  "x_axis": [
+    [
+      {
+        "label": "Quantité qui sera consommée pour les besoins médicaux et scientifiques",
+        "rowSpan": 2,
+        "isXAxis": {
+          "position": 1,
+          "validator": {
+            "type": "number"
           }
         }
-      ],
-      [
-        {
-          "isXAxis": {
-            "position": 2,
-            "ancestor_position": [2, 2],
-            "validator": {
-              "type": "multi-input",
-              "params": {
-                "validator_id": "1",
-                "variant_id": "#to-g"
-              }
-            }
-          },
-          "label": "Stupéfiants"
-        },
-        {
-          "isXAxis": {
-            "position": 3,
-            "ancestor_position": [2, 2],
-            "validator": {
-              "type": "multi-input",
-              "params": {
-                "validator_id": "1",
-                "variant_id": "#to-g"
-              }
-            }
-          },
-          "label": "Produits exonérés"
-        },
-        {
-          "isXAxis": {
-            "position": 4,
-            "ancestor_position": [3, 3],
-            "validator": {
-              "type": "file"
-            }
-          },
-          "label": "PF"
-        },
-        {
-          "isXAxis": {
-            "position": 5,
-            "ancestor_position": [3, 3],
-            "validator": {
-              "type": "callback",
-              "formula": "sum",
-              "entries": [1,2]
-            }
-          },
-          "label": "MP"
+      },
+      {
+        "label": "Quantité (Base anhydre) qui sera utilisée pour la fabrication",
+        "rowSpan": 2,
+        "isXAxis": {
+          "position": 2,
+          "validator": {
+            "type": "number"
+          }
         }
-      ]
+      },
+      {
+        "label": "Quantité (Base anhydre) qui sera importée sous forme de",
+        "colSpan": 2
+      }
     ],
-    "y_axis": [
+    [
       {
-        "label": "Alphaprodine"
+        "label": "PF",
+        "isXAxis": {
+          "ancestor_position": [3],
+          "position": 3,
+          "validator": {
+            "type": "number"
+          }
+        }
       },
       {
-        "label": "Anilédrine"
-      },
-      {
-        "label": "Bézitramide"
-      },
-      {
-        "label": "Canabis"
-      },
-      {
-        "label": "Canabis (résine de)"
-      },
-      {
-        "label": "Cétobémidone"
-      },
-      {
-        "label": "Coca (feuille de)"
-      },
-      {
-        "label": "Cocaine"
-      },
-      {
-        "label": "Codéine"
-      },
-      {
-        "label": "Dextromoramide"
-      },
-      {
-        "label": "Dextroproproxyphéne"
-      },
-      {
-        "label": "Difénoxine"
-      },
-      {
-        "label": "Dihydrocodéine"
-      },
-      {
-        "label": "Diphénoxylate"
-      },
-      {
-        "label": "Dipipanone"
-      },
-      {
-        "label": "Ethylmorphine"
-      },
-      {
-        "label": "Héroine"
-      },
-      {
-        "label": "Hydrocodone"
-      },
-      {
-        "label": "Hydromorphone"
-      },
-      {
-        "label": "Lévophanol"
-      },
-      {
-        "label": "Méthadone"
-      },
-      {
-        "label": "Morphine"
-      },
-      {
-        "label": "Nicomorphine"
-      },
-      {
-        "label": "Norméthadone"
-      },
-      {
-        "label": "Opium"
-      },
-      {
-        "label": "Oripavine"
-      },
-      {
-        "label": "Autre"
+        "label": "MP",
+        "isXAxis": {
+          "ancestor_position": [3],
+          "position": 4,
+          "validator": {
+            "type": "number"
+          }
+        }
       }
     ]
-  }
+  ],
+  "y_axis": [
+    {
+      "label": "EPHEDRINE"
+    },
+    {
+      "label": "PSEUDOEPHEDRINE"
+    },
+    {
+      "label": "3,4-METHYLENEDIOXYPHENYL-2-PROPANE"
+    },
+    {
+      "label": "PHENYL-IPROPANONE-2"
+    },
+    {
+      "label": "ACETONE"
+    },
+    {
+      "label": "Autre"
+    }
+  ]
+}
 }

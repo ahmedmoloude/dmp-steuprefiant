@@ -1,0 +1,64 @@
+
+
+{
+  "data" : [
+      {
+          "id" : "1",
+          "type": "multichoice-checkbox",
+          "libelle" : "Nature de l’élément",
+          "children" : [
+              {
+                  "id" : "1-1",
+                  "libelle" : "Stupéfiant",
+                  "depening_elements" : [
+                     {
+                        "type" : "table",
+                        "id" : "3"
+                     }          
+                  ]
+                },
+                {
+                  "id" : "2-1",
+                  "libelle" : "Psychotropes",
+                  "depening_elements" : [
+                     {
+                        "type" : "table",
+                        "id" : "4"
+                     }            
+                  ]
+                },
+                {
+                  "id" : "3-1",
+                  "libelle" : "Précurseurs Chimiques",
+                  "depening_elements" : [
+                     {
+                        "type" : "table",
+                        "id" : "5"
+                     }            
+                  ]
+                }
+          ]
+      },
+      {
+        "id" : "2",
+        "type" : "year",
+        "libelle" : "Année de la déclaration",
+        "year_config" : "decrement"
+      },
+      {
+        "id" : "3",
+        "type" : "table",
+        "config_id" : "15"
+      },
+      {
+          "id" : "4",
+          "type" : "table",
+          "config_id" : "15"
+      },
+      {
+          "id" : "5",
+          "type" : "table",
+          "config_id" : "15"
+      }
+  ]
+}
