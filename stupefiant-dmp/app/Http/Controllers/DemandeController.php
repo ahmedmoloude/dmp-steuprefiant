@@ -7,7 +7,7 @@ use App\Models\TableData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
-
+use Log;
 class DemandeController extends Controller
 {   
     /**
@@ -39,17 +39,17 @@ class DemandeController extends Controller
                 "data" => json_encode($request->data)
             ]);
 
-            $tables = $request->tables;
-            foreach($tables as $t){
-                TableData::create([
-                    "config" => json_encode($t['config']),
-                    "data" => json_encode($t['data']),
-                    "on_depend_id" => $t['on_depend_id'],
+            $tables = collect($request->tables)->map(function ($item, $key) use($demande) {
+                return [
+                    "config" => json_encode($item['config']),
+                    "data" => json_encode($item['data']),
+                    "on_depend_id" => $item['on_depend_id'],
                     "demande_id" => $demande->id,
-                ]);
-            }
+                ];
+            })->toArray();
+            TableData::insert($tables);
         } catch(\Exception $e){
-            //dd($e->getMessage());
+            Log::error('create demande error : ' .$e->getMessage());
             DB::rollback();
             return response()->json("Bad request !", 400);
         }
@@ -68,11 +68,12 @@ class DemandeController extends Controller
     {   
         try{
             $demande = Demande::where('id' , $id)->with('tables')->first();
-            if(!isset($demande)){
+            if(!$demande){
                 return response()->json("Not found !", 404);
             }
             return response($demande);  
         }catch(\Exception $e){
+            Log::error('get single demande error : '.$e->getMessage());
             return response()->json("Bad request !", 400);
         }
     } 
@@ -80,27 +81,35 @@ class DemandeController extends Controller
 
     /* List demandes by client */
     public function getDemandeByClientId(Request $request)
-    {   
-        try{
-            $client_id = $request->query('id');
+    { 
+      try{
+            $client_id = $request->id;
             $demande = Demande::where("client_id" , $client_id)->with('tables')->get();
             return response($demande);
 
         } catch(\Exception $e){
+            Log::error('get list demande by client id error : '.$e->getMessage());
             return response()->json("Bad request !", 400);
         }
     }
 
     /* Upload file */
     public function uploadImage(Request $request)
-    {
-        $image = $request->file('file');
-        try {
-            $fname = $image->getClientOriginalName();
-            $image->move(storage_path("/app/public/cdn/images"), $fname);
-            return response(['file_name' => "storage/cdn/images/".$fname], 201);
-        } catch (Exception $ex) {
-            return response(['message' => "Images::noUpploaded " . $ex->getMessage()], 500);
+    {   
+        $allowdExtentions = ['jpg', 'png', 'jpeg' , "pdf", "doc", "xls"];
+        $file = $request->file('file');
+
+        if ($file && in_array($file->getClientOriginalExtension(), $allowdExtentions)) {
+            try {
+                $fname = $file->getClientOriginalName();
+                $file->move(storage_path("/app/public/cdn/images"), $fname);
+                return response(['file_name' => "storage/cdn/images/".$fname], 201);
+            } catch (\Exception $e) {
+                Log::error('file not uploaded error : '.$e->getMessage());
+                return response(['message' => "File not uploaded !" . $e->getMessage()], 400);
+            }
+        }else{
+            return response()->json("Invalid format file !", 400);
         }
     }
 }
